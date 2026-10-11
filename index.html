@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Khaled Bendary | Economics</title>
+  <meta name="description" content="Personal academic website of Khaled Bendary.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1f2328;
+      --muted: #666d75;
+      --line: #e6e8eb;
+      --accent: #0f6b6b;
+      --accent-soft: #e6f2f1;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14171a;
+        --text: #e6e8ea;
+        --muted: #9aa2ab;
+        --line: #2a2f35;
+        --accent: #5cc4bf;
+        --accent-soft: #1c3331;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 56px 24px 32px;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 56px;
+    }
+
+    /* Sidebar */
+    .sidebar { position: sticky; top: 56px; align-self: start; }
+    .photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 10px;
+      object-fit: cover;
+      display: block;
+      background: var(--accent-soft);
+    }
+    .photo-fallback {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 64px;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+    .sidebar h1 { font-size: 28px; line-height: 1.2; margin: 20px 0 6px; }
+    .role { font-weight: 600; margin: 0; }
+    .affil { color: var(--muted); margin: 2px 0 16px; font-size: 15px; }
+    .links { display: flex; flex-wrap: wrap; gap: 6px 16px; padding: 0; margin: 0; list-style: none; font-size: 15px; }
+
+    /* Main */
+    section { margin-bottom: 44px; }
+    h2 {
+      font-size: 18px;
+      margin: 0 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 16px 0 0; list-style: none; }
+    .tags li {
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 13px;
+      padding: 3px 10px;
+      border-radius: 4px;
+    }
+    .paper { margin-bottom: 22px; }
+    .paper h3 { font-size: 16px; margin: 0; line-height: 1.4; }
+    .paper .authors { color: var(--muted); font-size: 14px; margin: 2px 0 4px; }
+    .paper details { font-size: 14px; }
+    .paper summary { color: var(--accent); cursor: pointer; width: fit-content; }
+    .paper details p { color: var(--muted); margin: 6px 0 0; }
+    .entry { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 10px; }
+    .entry .when { color: var(--muted); white-space: nowrap; font-size: 14px; }
+
+    footer {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 24px 40px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 760px) {
+      .page { grid-template-columns: 1fr; gap: 32px; padding-top: 32px; }
+      .sidebar { position: static; }
+      .photo { max-width: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+
+    <aside class="sidebar">
+      <!-- Add a square photo named photo.jpg next to this file. Until then, initials are shown. -->
+      <img class="photo" src="photo.jpg" alt="Khaled Bendary"
+           onerror="this.outerHTML='<div class=&quot;photo photo-fallback&quot;>KB</div>'">
+      <h1>Khaled Bendary</h1>
+      <p class="role">[Your title, e.g. Economist / Research Assistant]</p>
+      <p class="affil">[Your institution] · [City, Country]</p>
+      <ul class="links">
+        <li><a href="mailto:khaled.mohieldin53@gmail.com">Email</a></li>
+        <li><a href="cv.pdf">CV</a></li>
+        <li><a href="https://www.linkedin.com/in/YOUR-HANDLE">LinkedIn</a></li>
+        <li><a href="https://scholar.google.com/citations?user=YOUR-ID">Google Scholar</a></li>
+      </ul>
+    </aside>
+
+    <main>
+
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          [I am a development economist working in the economics of education, family and migration. In my research, I am interested in understanding barriers to human capital accumulation in developing world using quasi-experimental methods and field experiments. In particular, the impact of exposure to public policies and migration shocks on household welfare, including education attainment, child labor, child marriage, and female labor participation, mediated via intra-household allocation of resources (time use and substitution effects) and bargaining power (costs of adjustment argos: who gains and who loses). In many contexts, these constraints are more pronounced for women or families of migrants' background, hence gender-, family- and migration-specific aspects of these questions are a natural part of my research identity.
+]
+        </p>
+        <ul class="tags">
+          <li>[Research interest 1]</li>
+          <li>[Research interest 2]</li>
+          <li>[Research interest 3]</li>
+        </ul>
+      </section>
+
+      <section id="research">
+        <h2>Work in Progress</h2>
+
+        <div class="paper">
+          <h3>[Paper title]</h3>
+          <p class="authors">with [Coauthor A] &amp; [Coauthor B]</p>
+          <details>
+            <summary>Abstract</summary>
+            <p>[Paste the abstract here.]</p>
+          </details>
+        </div>
+
+        <div class="paper">
+          <h3>[Second paper title]</h3>
+          <p class="authors">[Solo-authored, or list coauthors]</p>
+          <details>
+            <summary>Abstract</summary>
+            <p>[Paste the abstract here.]</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="entry">
+          <div><strong>[Degree, field]</strong><br>[University]</div>
+          <div class="when">[Year – Year]</div>
+        </div>
+        <div class="entry">
+          <div><strong>[Degree, field]</strong><br>[University]</div>
+          <div class="when">[Year – Year]</div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>© 2026 Khaled Bendary</footer>
+
+</body>
+</html>
